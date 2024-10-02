@@ -1,6 +1,6 @@
 # Machine Learning Engineer Test: Computer Vision and Object Detection
 
-## Objective
+## Goal
 This project focuses on three main tasks:
 * Wall Detection using Traditional Computer Vision Techniques: Develop an initial approach for detecting walls through classic image processing and computer vision methods.
 * Dataset Creation and Model Training: Leverage the first approach to generate a dataset for training a YOLOv8 Pose model (keypoint detection) and apply this model for enhanced wall detection.
@@ -12,13 +12,13 @@ In this step, I employed classic techniques such as threshold binarization and m
 
 This approach serves as a solid foundation, but it requires careful adjustment of numerous parameters, as each image will necessitate its own specific configuration to achieve optimal results. Consequently, we may face challenges in detecting walls across a variety of images.
 
-PS: While I have implemented the OCR functionality for local use, it is not included in my API server. I chose EasyOCR as my OCR engine due to its superior text detection performance compared to other open-source alternatives like Tesseract. However, this high performance comes at the cost of significant memory and processing requirements. Consequently, I encountered challenges running it smoothly on the server without a GPU.
+PS: While I have implemented the OCR functionality for local use, it is not included in my API server. I chose EasyOCR as my OCR engine due to its superior text detection performance compared to other open-source alternatives like Tesseract. However, this high performance comes at the cost of significant memory and processing requirements. Therefore, I encountered challenges running it smoothly on the server without a GPU.
 
 To view the results and examples, please access the floor_plan/03-test_classical_detection.ipynb file.
 
 ### Yolo V8
 
-To train a YOLO model for wall detection, I utilized the previous approach to identify walls and generate labels within the CubiCasa5k dataset. These labels consist of bounding boxes and keypoints, which represent the start and end points of the straight walls.
+To train a YOLO model for wall detection, I took the previous approach to identify walls and generate labels within the CubiCasa5k dataset. These labels consist of bounding boxes and keypoints, which represent the start and end points of the straight walls.
 
 As I mentioned earlier, classical techniques present several challenges, and creating labels based on this data may not yield a consistent dataset. Due to the immaturity of the approach, the generated labels may fail to identify all the walls in the images, potentially leading to confusion for the model.
 
