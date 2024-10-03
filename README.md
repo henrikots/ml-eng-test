@@ -16,6 +16,9 @@ PS: While I have implemented the OCR functionality for local use, it is not incl
 
 To view the results and examples, please access the floor_plan/03-test_classical_detection.ipynb file.
 
+![classic 1](images_examples/classic_1.png)
+![classic 2](images_examples/classic_2.png)
+
 ### Yolo V8
 
 To train a YOLO model for wall detection, I took the previous approach to identify walls and generate labels within the CubiCasa5k dataset. These labels consist of bounding boxes and keypoints, which represent the start and end points of the straight walls.
@@ -24,15 +27,23 @@ As I mentioned earlier, classical techniques present several challenges, and cre
 
 The generated model is far from perfect, but it demonstrates that it has grasped the core principles of the problem we aim to address, as evidenced by its ability to detect some walls.
 
-PS: I attempted to implement the YOLO model for segmentation, however, the keypoint detection approach yielded the best results with the available data .
+PS: I attempted to implement the YOLO model for segmentation, however, the keypoint detection approach yielded the best results with the available data.
+
+PS2: I did not perform any threshold optimization here. I plotted everything the model identified as a wall, setting the minimum confidence to zero.
 
 To view the results and examples, please access the floor_plan/03-test_yolo_detection.ipynb file.
+
+![yolo 1](images_examples/yolo_1.png)
+![yolo 2](images_examples/yolo_2.png)
 
 ### CubiCasa5k segmentation model
 
 To test the implementation of a mature model, I used the pre-trained CubiCasa5K model, which is designed to detect walls, rooms, and icons such as doors and windows. This model performs well and provides a good repository for developing other models based on its principles.
 
 To view the results and examples, please access the floor_plan/03-test_cc5k_detection.ipynb file.
+
+![cc5k 1](images_examples/ccb5k_1.png)
+![cc5k_2](images_examples/ccb5k_2.png)
 
 ## Running the server
 
