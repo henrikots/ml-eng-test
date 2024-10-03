@@ -57,12 +57,12 @@ Classic computer vision technique:
 curl -X POST -F "image=@extracted_page_xyz.png" "http://localhost:3000/inference-run-classic --output output_image_classic.jpg"
 ```
 
-Yolo v8 keypoints detection techinique:
+Yolo v8 keypoints detection technique:
 ```
 curl -X POST -F "image=@extracted_page_xyz.png" "http://localhost:3000/inference-run-yolo --output output_image_yolo.jpg"
 ```
 
-CubiCasa5k pre trained model techinique:
+CubiCasa5k pre trained model technique:
 ```
 curl -X POST -F "image=@extracted_page_xyz.png" "http://localhost:3000/inference-run-cc5k --output output_image_cc5k.jpg"
 ```
